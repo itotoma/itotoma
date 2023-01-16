@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <link rel="stylesheet" href="./style.css">
+        <meta name="description" content="文書の説明は検索エンジンの検索結果ページに表示されるため、タイトルと並びSEO上非常に重要です。">
+        <script src="https://fred-wang.github.io/mathml.css/mspace.js"></script>
+    </head>
+    <body>
+        <!--ここからヘッダー-->
+        <header>
+            <h1>@</h1>
+            <nav id="global_navi">
+                <ul>
+                    <li><a href="index.html">HOME・CV</a></li>
+                    <li><a href="biology.html">細胞生物学</a></li>
+                    <li><a href="biophysics.html">生物物理</a></li>
+                    <li><a href="numeric.html">数値計算</a></li>
+                    <li><a href="control.html">制御工学</a></li>
+                    <li><a href="programming.html">プログラミング</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!--ヘッダここまでー-->
+        <!--ここからメインビジュアル画像-->
+       
+        <!--メインビジュアル画像ここまで-->
+        <!--ここからwrapperー-->
+        <div id="wrapper" class="clearfix">
+            <!--ここからメイン-->
+            <div id="main">
+                <section id="point">
+                    <h2>g-hフィルタ</h2>
+                    <section class="clearfix">
+                        <h3>g-hフィルタとは</h3>
+                        <p>
+                            カルマンフィルタや最小二乗フィルタ、ベネディクト-ボードナーフィルタなど、あらゆるフィルターはg-hフィルタの派生系となる
+                        </p>
+                    </section>
+                    <section class="clearfix">
+                        <h3>g-hフィルタの数理</h3>
+                        <li> 状態変数 y<sub>t</sub> </li>
+                        <li> 観測値 z<sub>t</sub></li>
+                        <br>
+                        <p>注目している系(プラント)を表す数理モデルを立てる このモデルをプロセスモデル、という。
+                        <p>プロセスモデルが y<sub>t+1</sub> = y<sub>t</sub> + dy で表現できるとする。</p>
+
+                        この値と観測値を比較し差が大きければ予測値に近づける。
+                        y<sub>t+1</sub> (補正後)= y<sub>t+1</sub> + g (z<sub>t+1</sub> - y<sub>t+1</sub>)
+
+                        <p>ゲイン dy も予測値を使って補正することでデータを生かす。dy (補正後) = dy + h (z<sub>t+1</sub> - y<sub>t+1</sub>)</p>
+
+
+                        <section id = "algorithm" style="background-color: grey; padding: 10px 10px 10px 10px; color: white;">
+
+                            <br>
+                            <h4>Step1. 予測ステップ (系伝播)</h4>
+                            <p> y<sub>t+1</sub> = y<sub>t</sub> + dy </p>
+                            
+                            <h4>Step2. 更新ステップ (観測更新)</h4>
+                            <p>dy (補正後) = dy + h (z<sub>t+1</sub> - y<sub>t+1</sub>)</p>
+                            <p>y<sub>t+1</sub> (補正後)= y<sub>t+1</sub> + g (z<sub>t+1</sub> - y<sub>t+1</sub>)</p>
+                        </section> 
+                        <p>この予測伝播と観測更新のサイクル (epoch) をくりかえす逐次処理になっている</p>
+                        
+                    </section>
+                </section>
+                <br>
+                <br>
+            </div>
+            <!--メインここまで-->
+            <!--ここからサイド-->
+            <aside id="sidebar">
+                <section id="side_banner">
+                    <h2>関連リンク</h2>
+                    <ul>
+                        <li>
+                            <a href="https://twitter.com/ItohTh/" target="_blank"><img src="000c.jpg" alt="ブログ" style="width: 40px;"></a>
+    
+                        </li>
+                    </ul>
+                </section>
+            </aside>
+            <!--サイドここまで-->
+        </div>
+        <!--wrapperここまで-->
+        <!--ここからフッター-->
+        <footer>
+            <div id="footer_navi">
+                <ul>
+                    <li><a href="index.html">HOME・CV</a></li>
+                    <li><a href="biology.html">細胞生物学</a></li>
+                    <li><a href="biophysics.html">生物物理</a></li>
+                    <li><a href="numeric.html">数値計算</a></li>
+                    <li><a href="control.html">制御工学</a></li>
+                    <li><a href="programming.html">プログラミング</a></li>
+                </ul>
+            </div>
+            
+        </footer>
+        <!--フッターここまで-->
+    </body>
+</html>
